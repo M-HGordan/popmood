@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>پاپ‌مود 🍿 | فیلم مناسب حالت</title>
+  <meta name="description" content="پاپ‌مود: حالت رو بگو، فیلمش رو پاپ کن! دستیار فارسی پیشنهاد فیلم بر اساس حال.">
+  <meta name="theme-color" content="#090a1c">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="nav">
+    <div class="logo"><span class="logo-i">🍿</span><div><b>پاپ‌مود</b><small>حالت رو بگو، فیلمش رو پاپ کن</small></div></div>
+    <a href="#hero" class="on">💬 گفتگو</a>
+    <a href="#recs">⭐ پیشنهادها</a>
+    <a href="#json">{ } خروجی قرارداد</a>
+    <button id="reset" title="شروع دوباره">↻ شروع دوباره</button>
+    <div class="nav-foot">بهتر شدن حال<br>با داستان‌های بهتر ✨</div>
+  </aside>
+
+  <main class="center">
+    <section id="hero" class="hero">
+      <img class="mascot" src="img/robot.webp" alt="سینمو، ربات همراه" width="160">
+      <div class="hero-text">
+        <h1>سلام! من سینمو هستم 👋</h1>
+        <p>به پاپ‌مود خوش اومدی 🍿 امروز چه حسی داری؟ حالت رو بگو، فیلمش رو من پیدا می‌کنم.</p>
+      </div>
+      <div id="chips">
+        <button data-text="امروز حالم شاده" data-mood="happy"><i>😊</i>شاد</button>
+        <button data-text="امروز غمگینم" data-mood="sad"><i>😢</i>غمگین</button>
+        <button data-text="عصبانی‌ام" data-mood="angry"><i>😠</i>عصبانی</button>
+        <button data-text="دنبال هیجان و غافلگیری‌ام" data-mood="surprise"><i>🤩</i>متعجب</button>
+        <button data-text="حالم معمولیه" data-mood="neutral"><i>😐</i>خنثی</button>
+      </div>
+    </section>
+
+    <section class="chat">
+      <div id="messages" aria-live="polite"><div class="bubble bot">سلام! من سینمو هستم 👋 الان حالت چطوره؟</div></div>
+      <div class="input-row">
+        <input id="input" type="text" placeholder="بگو چه حسی داری... مثلاً: غمگینم و انیمیشن می‌خوام" autocomplete="off">
+        <button id="send" title="ارسال">➤</button>
+      </div>
+      <div class="quick">
+        <button data-text="یه فیلم بخنده‌دار می‌خوام">😂 یه فیلم بامزه</button>
+        <button data-text="یه فیلم پرپیچ‌وخم می‌خوام">🧩 پرپیچ‌وخم</button>
+        <button data-text="یه فیلم بده حالم خوب کنه و غمگین نباشه">🌈 حالم رو خوب کن</button>
+        <button data-text="یکی دیگه">➕ یکی دیگه</button>
+      </div>
+    </section>
+
+    <section id="recs">
+      <h2>⭐ پیشنهاد برای تو</h2>
+      <div id="cards" class="grid"><p class="hint">هنوز پیشنهادی نداریم؛ حالت رو بگو!</p></div>
+    </section>
+  </main>
+
+  <aside class="panel">
+    <div class="card-box mood-card" id="moodCard">
+      <small>حال فعلی تو</small>
+      <div class="mood-row"><span id="moodEmoji">🙂</span><b id="moodName">هنوز نگفتی</b></div>
+      <p id="moodNote">یکی از دکمه‌ها رو بزن یا برام بنویس.</p>
+    </div>
+    <div class="card-box"><h3>🕘 تاریخچه‌ی حال</h3><ul id="history"><li class="hint">هنوز چیزی ثبت نشده</li></ul></div>
+    <div class="card-box" id="json"><h3>{ } خروجی قرارداد مشترک</h3><pre id="contract">{ }</pre></div>
+  </aside>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

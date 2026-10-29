@@ -1,0 +1,8 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+data/tmdb_5000_movies.csv
+data/movies_tmdb.json
+web/posters/
+.DS_Store
